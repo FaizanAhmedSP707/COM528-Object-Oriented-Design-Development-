@@ -25,6 +25,11 @@ public class Cat {
         this.weight--;
     }
     
+    public void eat()
+    {
+        this.weight++;
+    }
+    
     public void display()
     {
         System.out.println("Name: " + this.name + ", Age: " + this.age + ", Weight: " + this.weight);
