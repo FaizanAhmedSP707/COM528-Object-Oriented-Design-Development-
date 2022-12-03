@@ -26,5 +26,25 @@ public class CatApp {
         
         clyde.walk();
         clyde.display();
+        
+        //Extension of code to perform task 7
+        Cat flathead = new Cat("Flathead", 7, 10);
+        Cat cupra = new Cat("Cupra", 2, 7);
+        
+        System.out.print("\n\n\n");
+        
+        flathead.display();
+        flathead.eat();
+        flathead.eat();
+        flathead.display();
+        
+        System.out.println("\n");
+        
+        cupra.display();
+        cupra.walk();
+        cupra.walk();
+        cupra.walk();
+        cupra.walk();
+        cupra.display();
     }
 }
