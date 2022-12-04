@@ -17,6 +17,8 @@ public class HelloWorld {
         
         //Start of week 1 activities
         //Storing student details using variables
+        
+        /*
         String studentName;
         String studentCourse;
         double studentMark;
@@ -46,6 +48,47 @@ public class HelloWorld {
         
             //Finally print all the entered details:
             System.out.println("\nName: "+studentName+", Course: "+studentCourse+", Mark: "+studentMark+"\n");
+        }
+        */
+        
+        String studentID;
+        String studentName;
+        String studentCourse;
+        double studentMark;
+        String markToDouble;
+        Scanner scanInput = new Scanner(System.in);
+        
+        //Creating a loop to display details of 5 students, one after the other
+        for(int i=0; i<5; i++)
+        {
+            System.out.println("Please enter the student id:");
+            studentID = scanInput.nextLine();
+            
+            System.out.println("\nPlease enter your name:");
+            studentName = scanInput.nextLine();
+    
+            System.out.println("\nPlease enter your course name:");
+            studentCourse = scanInput.nextLine();
+        
+            System.out.println("\nPlease enter the overall mark you have received: ");
+            markToDouble = scanInput.nextLine();
+        
+            //Parse string data to actual double
+            studentMark = Double.parseDouble(markToDouble);
+        
+            //Checking the student mark that was inputted (exercise 3)
+            if(studentMark < 0 || studentMark >100)
+            {
+                System.out.println("\nThe mark submitted is invalid!");
+            }
+            
+            //Creating a student object
+            Student studentObj = new Student(studentID, studentName, studentCourse, studentMark);
+            
+            //Finally print all the entered details:
+            System.out.println("\n");
+            studentObj.printDetails();
+            System.out.println("\n");
         }
     }
 }
